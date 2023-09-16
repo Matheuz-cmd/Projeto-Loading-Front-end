@@ -1,0 +1,111 @@
+:root{
+    --azul-1  : #00c1b2;
+    --azul-2  : #06d1d8;
+    --roxo-1  : #3f1157;
+    --roxo-2  : #6e44bb;
+    --rosa    : #d16ce6;
+    --branco  : #fff;
+    --branco-2: #edecee;
+    --laranja : #f68910;
+    --preto   :   #000;
+}
+
+
+body{
+    font-family: 'Bebas Neue';
+    background-color: var(--roxo-1);
+    color: var(--branco);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+.content-add-item{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+#input-new-task,
+#btn-new-task{
+    border: none;
+    font-size: 1rem;
+    outline: none;
+    padding: 1rem;
+}
+#input-new-task{
+    width: 20rem;
+    border-radius: 1rem;
+}
+#btn-new-task{
+    background-color: var(--roxo-2);
+    color: var(--branco);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: .4s;
+}
+#btn-new-task:hover{
+    background-color: var(--rosa);
+}
+#to-do-list{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0;
+}
+#to-do-list li{
+
+    border-radius: 1rem;
+    list-style-type: none;
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#to-do-list li:hover{
+    background-color: var(--roxo-2);
+}
+.to-do-task > input[type='checkbox']:checked + div{
+    text-decoration: line-through;
+    color: var(--preto);
+}
+#btn-ok{
+    border: none;
+    background-color: var(--laranja);
+    color: var(--branco);
+    font-size: 1.4rem;
+    padding: .4rem .8rem;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: .4s;
+}
+#btn-ok:hover{
+    background-color: var(--azul-1);
+}
+
+#checkbox{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+@media(max-width: 775px){
+    #input-new-task{
+        width: 70%;
+    }
+    .content-add-item button{
+        width: 30%;
+    }
+}
